@@ -56,7 +56,7 @@ ${this.whereCanPlay().map( P => `  * ${P}`).join("\n")}
     return this.gameStateSubj.value.turn;
   }
 
-  get board(): Board_RO {
+ get board(): Board_RO {
     return this.gameStateSubj.value.board;
   }
 

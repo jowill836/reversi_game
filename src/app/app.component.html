@@ -1,4 +1,15 @@
 <pre>
 Utilisez la console de dévéloppement pour interagir avec le service
 (pressez contrôle-majuscule-i).
+
+<table>
+    <tr *ngFor="let ligne of this.RGS.board; index as i">
+        <td *ngFor="let col of ligne">
+            <div class ="Player1" *ngIf="col == 'Player1'">X</div>
+            <div class ="Player2" *ngIf="col == 'Player2'">O</div>
+            <div class ="Empty" *ngIf="col == 'Empty'"> </div>
+        </td>
+    </tr>
+</table>
+
 </pre>

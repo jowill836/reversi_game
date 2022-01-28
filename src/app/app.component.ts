@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IaService } from './ia.service';
 import { ReversiGameEngineService } from './reversi-game-engine.service';
+import { Board, getEmptyBoard } from './ReversiDefinitions';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,11 @@ import { ReversiGameEngineService } from './reversi-game-engine.service';
 })
 export class AppComponent {
 
-  constructor(public RGS: ReversiGameEngineService, private ia: IaService) {}
+  
+  constructor(public RGS: ReversiGameEngineService, private ia: IaService) {
+    this.RGS.board;
+    
+  }
 
+  
 }
