@@ -1,5 +1,11 @@
-<pre> 
+<pre>
 
+
+    <app-plateau [board]="this.RGS.board" [turn]="this.RGS.turn" [playable]="canPlayy" (play)="this.RGS.play($event[0],$event[1])">
+        
+    </app-plateau>
+
+<hr/>
 
     <div>{{this.RGS.turn === "Player1" ? "-->Player1 (X ou Noir)" : "   Player1 (X ou Noir)" }}  {{this.getNumberPions('Player1') }}</div>
     <div>{{this.RGS.turn === "Player2" ? "-->Player2 (O ou Blanc)" : "   Player2 (O ou Blanc)" }}  {{this.getNumberPions('Player2')}}</div>
@@ -10,7 +16,7 @@
                 [class.Player1] = "colonne === 'Player1'"
                 [class.Player2] = "colonne === 'Player2'"
                 [class.Empty] = "colonne === 'Empty'"
-                [class.canPlay] = isPlayable(i,j)
+                [class.canPlay] = "canPlayy[i][j]"
                 (click) = "this.RGS.play(i,j)"
                     >
 

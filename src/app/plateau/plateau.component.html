@@ -1,0 +1,20 @@
+
+<pre>
+<table>
+    <tr *ngFor="let ligne of this.board; index as i">
+        <td *ngFor="let colonne of ligne; index as j"
+            [class.Player1] = "colonne === 'Player1'"
+            [class.Player2] = "colonne === 'Player2'"
+            [class.Empty] = "colonne === 'Empty'"
+            [class.canPlay] = "playable[i][j]"
+            (click) = "PLAY([i,j])"
+                >
+
+                    <div></div>
+
+        </td>
+
+    </tr>
+</table>
+
+</pre>
